@@ -1,11 +1,11 @@
 clc, clear all, close all
 
-iex = 2; % Example number
+iex = 1; % Example number
 
 %% Fourier Example 1 (f(x) = x)
 if iex == 1
     x = [-pi:.01:pi]; % range of X
-    N = 5; % number of fourier coefficients
+    N = 10; % number of fourier coefficients
     
     % actual function
     fx = @(x) x;
@@ -31,9 +31,9 @@ if iex == 1
         fx_ii = fx_ii + fourier_coeff;
         plot(x,fx_ii,'LineWidth',2,'DisplayName',['N = ',num2str(ii)]) % Uncomment this line to see ALL of them
     end
-    
     legend show
 end
+
 %% Newton's method
 if iex == 2
     x = [-1.5:.01:2.5]; % range of X
